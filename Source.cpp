@@ -2,19 +2,19 @@
 using namespace std;
 
 
-//элемент дерева
+//СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР°
 struct element {
-	element* left; // указатель на левого потоика
-	element* right; // указатель на левого потоика
-	int value; // значение 
-	int count = 1 ; // количество элемента
+	element* left; // СѓРєР°Р·Р°С‚РµР»СЊ РЅР° Р»РµРІРѕРіРѕ РїРѕС‚РѕРёРєР°
+	element* right; // СѓРєР°Р·Р°С‚РµР»СЊ РЅР° Р»РµРІРѕРіРѕ РїРѕС‚РѕРёРєР°
+	int value; // Р·РЅР°С‡РµРЅРёРµ 
+	int count = 1 ; // РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚Р°
 };
 
-//класс бинарное дерево
+//РєР»Р°СЃСЃ Р±РёРЅР°СЂРЅРѕРµ РґРµСЂРµРІРѕ
 class Three {
 protected:
 	element* head; 
-	// защищенные рекурсивыне методы
+	// Р·Р°С‰РёС‰РµРЅРЅС‹Рµ СЂРµРєСѓСЂСЃРёРІС‹РЅРµ РјРµС‚РѕРґС‹
 	void printElement(element*,int);
 	void addElem(int, element*);
 	void InThreeHelp(int, element*);
@@ -72,7 +72,7 @@ void Three::InThree(int s) {
 	return;
 }
 
-//Максимальный элемент в дереве;
+//РњР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЌР»РµРјРµРЅС‚ РІ РґРµСЂРµРІРµ;
 int Three::MaxElement() {
 	element* pElem = new element;
 	pElem = head;
@@ -82,7 +82,7 @@ int Three::MaxElement() {
 	return pElem->value;
 }
 
-//вывод данных в виде дерева;
+//РІС‹РІРѕРґ РґР°РЅРЅС‹С… РІ РІРёРґРµ РґРµСЂРµРІР°;
 void Three::showTree() {
 	if (head == NULL) {
 		cout << "Three is Empty"<<"\n";
@@ -92,7 +92,7 @@ void Three::showTree() {
 	return;
 	}
 	
-//вывод элемента дерева ;
+//РІС‹РІРѕРґ СЌР»РµРјРµРЅС‚Р° РґРµСЂРµРІР° ;
 
 void Three::printElement(element* pElem,int lvl) {
 	if (pElem == NULL) {
@@ -125,7 +125,7 @@ void Three::printElement(element* pElem,int lvl) {
 	return;
 }
 
-//Проверка на пустое дерево
+//РџСЂРѕРІРµСЂРєР° РЅР° РїСѓСЃС‚РѕРµ РґРµСЂРµРІРѕ
 void Three::add(int s) {
 
 	if (head == NULL) {
@@ -140,7 +140,7 @@ void Three::add(int s) {
 
 }
 
-//добавление элемента 
+//РґРѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° 
 void Three::addElem(int s, element* pElem) {
 
 
@@ -177,7 +177,7 @@ void Three::addElem(int s, element* pElem) {
 	return;
 }
 
-//конструктор
+//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 Three::Three() {
 	head = NULL;
 }
